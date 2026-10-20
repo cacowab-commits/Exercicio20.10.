@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 60px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.barra-topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #2c3e50;
+}
+
+
+.barra-topo ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.barra-topo li {
+  float: left;
+  margin-right: 25px;
+}
+
+.barra-topo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.aviso {
+  position: relative;
+  padding: 15px 50px 15px 20px;
+  margin: 0 20px 20px 20px;
+  background-color: #00fffb;
+}
+
+#fechar-aviso {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.mensagem {
+  margin: 0;
+  color: #003049;
+  font-weight: bold;
+}
+
+.destaque {
+  background-color: #FF6B35;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+
+main p {
+  line-height: 1.6;
+}
+
+/*
+  Como calculei a barra fixa:
+  A barra tem padding de 15px em cima e 15px embaixo, somando com a altura
+  dos textos dos links (aproximadamente 19px com fonte de 16px), o que chega
+  próximo a 50px de altura.
+  Como a barra é position: fixed, ela deixa de ocupar espaço dentro da página
+  e o conteúdo sobe, ficando escondido atrás dela. Por isso usei 60px
+  (50px da barra + 10px de folga), tanto no padding-top do body, que protege
+  o aviso, quanto no margin-top do main, para o conteúdo não ficar escondido
+  nem colado na barra.
+*/
+main {
+  margin-top: 60px;
+  padding: 0 20px;
+}
